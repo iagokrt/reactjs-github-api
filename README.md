@@ -1,8 +1,8 @@
 # readme
 
-E.G. [https://github.com/iagokrt/reactjs-github-api](https://github.com/iagokrt/reactjs-github-api)
+E.G. [reactjs-github-api](https://serene-react.netlify.app/)
 
-github_explorer
+github_explorer 
 
 ![preview failed :(](https://github.com/iagokrt/reactjs-github-api/blob/master/preview.gif)
 
