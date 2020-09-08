@@ -1,6 +1,6 @@
 import React, { useState, useEffect, FormEvent} from 'react';
 import { FiChevronRight } from 'react-icons/fi';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 import api from '../../services/api';
 
@@ -58,8 +58,17 @@ const Dashboard: React.FC = () => {
   return (
     <>
       <img src={Logo} alt="GitHub _Explorer" />
-      <Title>Explore for repositories on GitHub</Title>
-
+      <Title>Explore for repositories on GitHub <small>and save it to local storage</small>
+        <p>
+          try typing: <a href="https://github.com/iagokrt"> iagokrt/gokrt</a>
+        </p>
+        <p>
+          or: <a className="three" href="https://github.com/mrdoob/three.js">mrdoob/three.js</a>
+        </p>
+        <p>
+          or: <a className="nasa" href="https://github.com/nasa/astrobee">nasa/astrobee</a>
+        </p>
+      </Title>
       <Form hasError={!!inputError} onSubmit={handleAddRepository}  >
         <input
         value={newRepo}

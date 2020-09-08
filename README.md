@@ -1,4 +1,4 @@
-# readmeds.dsmdsmds
+# readme
 
 E.G. [https://github.com/iagokrt/reactjs-github-api](https://github.com/iagokrt/reactjs-github-api)
 
@@ -165,3 +165,26 @@ export default App;
   ]
 }
 ```
+
+
+## localstorage mechanics
+
+```js
+  const [repositories, setRepositories] = useState<Repository[]>(() => {
+    const storagedRepositories = localStorage.getItem('@githubExplorer:repositories');
+
+    if (storagedRepositories) {
+      return JSON.parse(storagedRepositories);
+    } else {
+      return [];
+    }
+  });
+
+  // and
+
+    useEffect(() => {
+    localStorage.setItem('@githubExplorer:repositories', JSON.stringify(repositories));
+  }, [repositories])
+```
+
+

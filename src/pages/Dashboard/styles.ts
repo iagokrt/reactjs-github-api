@@ -1,14 +1,33 @@
 import styled, { css } from 'styled-components';
 import { shade } from 'polished';
 
-export const Title = styled.h1`
+export const Title = styled.h1.attrs(props => ({
+  className: props.className,
+}))`
+
   font-size: 48px;
-  color: #666;
+  color: #F1F1F1;
 
   max-width: 450px;
   line-height: 56px;
 
   margin-top: 80px;
+
+  small {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+
+
+    a.three {
+      color: green;
+    }
+    a.nasa {
+      color: blue;
+    }
+  }
 `;
 
 interface FormProps {
@@ -53,15 +72,16 @@ export const Form = styled.form<FormProps>`
   button {
     width: 210px;
     height: 70px;
-    background: #04d361;
+    background: ${shade(0.4, '#04d361')};
     border-radius: 0 5px 5px 0;
     border: 0;
     color: #FFF;
     font-weight: bold;
-    transition: background-color 0.2s;
+    transition: all linear 0.2s;
 
     &:hover {
-      background: ${shade(0.4, '#04d361')};
+      background:#04d361;
+      color: #020202;
     }
   }
 `;
