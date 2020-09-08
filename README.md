@@ -2,7 +2,9 @@
 
 E.G. [https://github.com/iagokrt/reactjs-github-api](https://github.com/iagokrt/reactjs-github-api)
 
-githubexplorer
+github_explorer
+
+![preview failed :(](https://github.com/iagokrt/reactjs-github-api/blob/master/preview.gif)
 
 Axios sample:
 
